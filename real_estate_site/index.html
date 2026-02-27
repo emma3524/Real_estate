@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomeFind - Buy Your Dream House</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>HomeFind</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#properties">Properties</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Find Your Dream Home</h2>
+        <p>Affordable | Luxury | Verified Listings</p>
+        <button onclick="scrollToProperties()">View Properties</button>
+    </section>
+
+    <section id="properties" class="properties">
+        <h2>Available Houses</h2>
+
+        <div class="filter">
+            <select id="priceFilter" onchange="filterProperties()">
+                <option value="all">All Prices</option>
+                <option value="low">Below $100,000</option>
+                <option value="mid">$100,000 - $300,000</option>
+                <option value="high">Above $300,000</option>
+            </select>
+        </div>
+
+        <div class="property-container">
+
+            <div class="card" data-price="low">
+                <img src="https://via.placeholder.com/300x200">
+                <h3>Cozy Family House</h3>
+                <p>Price: $80,000</p>
+                <button onclick="contactAlert()">Contact</button>
+            </div>
+
+            <div class="card" data-price="mid">
+                <img src="https://via.placeholder.com/300x200">
+                <h3>Modern Apartment</h3>
+                <p>Price: $200,000</p>
+                <button onclick="contactAlert()">Contact</button>
+            </div>
+
+            <div class="card" data-price="high">
+                <img src="https://via.placeholder.com/300x200">
+                <h3>Luxury Villa</h3>
+                <p>Price: $500,000</p>
+                <button onclick="contactAlert()">Contact</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form onsubmit="submitForm(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 HomeFind. All Rights Reserved.</p>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
